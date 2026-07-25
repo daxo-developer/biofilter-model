@@ -15,7 +15,7 @@ This package implements a 1D advection-dispersion-reaction model for solute tran
 ## Installation
 
 ```
-git clone [https://github.com/daxo-developer/biofilter-model.git](https://github.com/daxo-developer/biofilter-model.git)
+git clone https://github.com/daxo-developer/biofilter-model.git
 cd biofilter-model
 pip install -e .
 ```
