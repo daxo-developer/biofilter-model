@@ -14,14 +14,14 @@ This package implements a 1D advection-dispersion-reaction model for solute tran
 
 ## Installation
 
-```bash
-git clone https://github.com/mynamexD/bio-model.git
+```
+git clone https://github.com/daxo-developer/bio-model.git
 cd bio-model
 pip install -e .
 
 Usage
 
-```python
+```
 from bio_model import load_usgs_data, calibrate, bootstrap_ci
 
 # Load real data (or use local CSV)
@@ -37,13 +37,13 @@ print(ci)
 
 Testing
 
-```bash
+```
 pytest tests/ --cov=src/bio_model
 ```
 
 Documentation
 
-```bash
+```
 cd docs
 make html
 ```
