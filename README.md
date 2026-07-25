@@ -18,10 +18,10 @@ This package implements a 1D advection-dispersion-reaction model for solute tran
 git clone https://github.com/daxo-developer/bio-model.git
 cd bio-model
 pip install -e .
-
-Usage
-
 ```
+
+## Usage
+
 from bio_model import load_usgs_data, calibrate, bootstrap_ci
 
 # Load real data (or use local CSV)
@@ -33,21 +33,68 @@ D, R, rmse, r2, _ = calibrate(df['time_sec'], df['inlet'], df['outlet'])
 # Bootstrap CI
 ci = bootstrap_ci(df['time_sec'], df['inlet'], df['outlet'])
 print(ci)
-```
 
-Testing
+## Testing
 
 ```
 pytest tests/ --cov=src/bio_model
 ```
 
-Documentation
+## Documentation
 
 ```
 cd docs
 make html
 ```
 
-License
+## Project tree:
 
-MIT
+```
+
+├── LICENSE
+├── README.md
+├── docs
+│   ├── conf.py
+│   └── index.rst
+├── paper
+│   └── main.tex
+├── requirements.txt
+├── setup.py
+├── src
+│   ├── bio_model
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-314.pyc
+│   │   │   ├── calibration.cpython-314.pyc
+│   │   │   ├── data_loader.cpython-314.pyc
+│   │   │   ├── sensitivity.cpython-314.pyc
+│   │   │   ├── solver.cpython-314.pyc
+│   │   │   └── uncertainty.cpython-314.pyc
+│   │   ├── calibration.py
+│   │   ├── data_loader.py
+│   │   ├── sensitivity.py
+│   │   ├── solver.py
+│   │   └── uncertainty.py
+│   └── bio_model.egg-info                                                        │       ├── PKG-INFO
+│       ├── SOURCES.txt
+│       ├── dependency_links.txt
+│       ├── requires.txt
+│       └── top_level.txt
+└── tests
+    ├── __pycache__
+    │   ├── test_calibration.cpython-314-pytest-9.1.1.pyc
+    │   ├── test_data_loader.cpython-314-pytest-9.1.1.pyc
+    │   ├── test_sensitivity.cpython-314-pytest-9.1.1.pyc
+    │   ├── test_solver.cpython-314-pytest-9.1.1.pyc
+    │   ├── test_uncertainty.cpython-314-pytest-9.1.1.pyc
+    │   └── test_uncertainty_mcmc.cpython-314-pytest-9.1.1.pyc
+    ├── test_calibration.py
+    ├── test_data_loader.py
+    ├── test_sensitivity.py
+    ├── test_solver.py
+    ├── test_uncertainty.py
+    └── test_uncertainty_mcmc.py
+
+9 directories, 36 files
+
+```
