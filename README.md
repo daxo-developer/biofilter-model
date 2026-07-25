@@ -15,7 +15,7 @@ This package implements a 1D advection-dispersion-reaction model for solute tran
 ## Installation
 
 ```bash
-git clone https://github.com/yourname/bio-model.git
+git clone https://github.com/mynamexD/bio-model.git
 cd bio-model
 pip install -e .
 
